@@ -195,7 +195,7 @@ section { padding: 60px 0; }
   transform: scale(1.05) rotate(-2deg);
   box-shadow: 0 25px 70px rgba(168, 85, 247, 0.45)
 }
-.portrait-svg { width: 100%; height: auto; border-radius: var(--radius-md); }
+.portrait-svg { width: 100%; height: auto; border-radius: var(--radius-md); padding-top: 20px; }
 
 .hero-badge {
   display: inline-block;
@@ -625,6 +625,26 @@ margin-top: 60px;
   :root { --container-width: 960px; }
 }
 
+/* Desktop footer layout */
+@media (min-width: 769px) {
+  .footer-inner {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    gap: 20px;
+  }
+
+  .footer-inner .logo {
+    margin-bottom: 0;
+  }
+
+  .footer-desc {
+    margin: 0;
+  }
+}
+
 /* Tablet */
 @media (max-width: 768px) {
   section { padding: 56px 0; }
@@ -649,7 +669,12 @@ margin-top: 60px;
 @media (max-width: 480px) {
   .container { padding: 0 18px; }
 
-  .header-inner { flex-direction: column; gap: 14px; }
+   .header-inner {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+}
   .main-nav ul { flex-wrap: wrap; justify-content: center; gap: 14px; }
 
   .hero-portrait { width: 150px; }
